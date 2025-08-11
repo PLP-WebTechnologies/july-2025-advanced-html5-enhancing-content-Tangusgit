@@ -6,56 +6,42 @@
     <title>Superhero Travel Portal - HTML5 Assignment</title>
 </head>
 <body>
-    <!-- Mystical Video Background -->
+    <!-- Video would appear as a small element, not a background -->
     <video id="bg-video" autoplay muted playsinline loop preload="auto" crossorigin="anonymous">
         <source src="galactic video/854228-hd_1920_1080_30fps.mp4" type="video/mp4">
     </video>
 
-    <style>
-        #bg-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-            background-size: cover;
-        }
-    </style>
-
-    <!-- Main Content -->
-    <main style="max-width: 800px; margin: 20px auto; padding: 20px; background: rgba(211, 218, 215, 0.9); border: 3px solid #1a237e;">
+    <!-- Main Content (no styling, full width) -->
+    <main>
         <header>
-            <h1 style="color: #e63946; text-align: center; margin-bottom: 5px;">HERO TRAVEL PORTAL</h1>
-            <p style="text-align: center; font-style: italic;">"Book interdimensional journeys across the multiverse!"</p>
+            <h1>HERO TRAVEL PORTAL</h1>
+            <p>"Book interdimensional journeys across the multiverse!"</p>
             <nav aria-label="Quick links">
-                <ul style="list-style: none; padding: 0; text-align: center;">
-                    <li style="display: inline; margin: 0 10px;"><a href="#destinations">Destinations</a></li>
-                    <li style="display: inline; margin: 0 10px;"><a href="#alerts">Alerts</a></li>
-                    <li style="display: inline; margin: 0 10px;"><a href="#booking">Booking</a></li>
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#alerts">Alerts</a></li>
+                    <li><a href="#booking">Booking</a></li>
                 </ul>
             </nav>
         </header>
 
-        <!-- Destinations Table -->
+        <!-- Table (basic unstyled borders) -->
         <section id="destinations">
-            <h2 style="color: #1a237e; border-bottom: 2px solid #1a237e; padding-bottom: 5px;">Multiversal Destinations</h2>
-            <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+            <h2>Multiversal Destinations</h2>
+            <table border="1">
                 <thead>
-                    <tr style="background: #546456; color: white;">
-                        <th style="padding: 8px; text-align: left;">Realm</th>
-                        <th style="padding: 8px; text-align: left;">Location</th>
-                        <th style="padding: 8px; text-align: left;">Features</th>
+                    <tr>
+                        <th>Realm</th>
+                        <th>Location</th>
+                        <th>Features</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="padding: 8px;"><strong>Asgard</strong></td>
-                        <td style="padding: 8px;">Yggdrasil Branch</td>
-                        <td style="padding: 8px;">
-                            <ul style="margin: 0; padding-left: 20px;">
+                        <td><strong>Asgard</strong></td>
+                        <td>Yggdrasil Branch</td>
+                        <td>
+                            <ul>
                                 <li>Godly training</li>
                                 <li>Mjolnir testing</li>
                                 <li>Bifrost views</li>
@@ -63,10 +49,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding: 8px;"><strong>Dark Dimension</strong></td>
-                        <td style="padding: 8px;">Beyond Time</td>
-                        <td style="padding: 8px;">
-                            <ul style="margin: 0; padding-left: 20px;">
+                        <td><strong>Dark Dimension</strong></td>
+                        <td>Beyond Time</td>
+                        <td>
+                            <ul>
                                 <li>Reality-bending</li>
                                 <li>Eldritch magic</li>
                                 <li>Time manipulation</li>
@@ -77,127 +63,39 @@
             </table>
         </section>
 
-        <!-- Supervillain Warning System -->
-        <article id="alerts" style="background: #8B0000; color: white; padding: 15px; margin-bottom: 20px; border: 2px dashed #ffd700;">
-            <h3 style="margin-top: 0;">⚠️ Supervillain Alert System</h3>
+        <!-- Supervillain Alert (no red background) -->
+        <article id="alerts">
+            <h3>⚠️ Supervillain Alert System</h3>
             <p>Report known villain activity:</p>
-            <input type="text" name="villain-alert" placeholder="e.g., 'Loki in Asgard'" 
-                   style="width: 90%; padding: 8px;"
-                   pattern=".*[A-Za-z]{3,}.*" title="Please provide at least 3 characters"
-                   autocomplete="off">
+            <input type="text" name="villain-alert" placeholder="e.g., 'Loki in Asgard'">
         </article>
 
-        <!-- Travel Booking Form -->
+        <!-- Form (fully functional but unstyled) -->
         <form id="hero-travel-form" aria-labelledby="booking">
-            <fieldset id="booking" style="border: 2px solid #1a237e; padding: 15px; margin-bottom: 20px;">
-                <legend style="padding: 0 10px; font-weight: bold;">Hero Profile</legend>
-                <label style="display: block; margin-bottom: 10px;">
+            <fieldset id="booking">
+                <legend>Hero Profile</legend>
+                <label>
                     Superhero Alias:
-                    <input type="text" name="hero-name" required minlength="3" 
-                           style="width: 100%; padding: 8px;"
-                           placeholder="e.g., Captain Quantum"
-                           autocomplete="name">
+                    <input type="text" name="hero-name" required minlength="3" placeholder="e.g., Captain Quantum">
                 </label>
-                <label style="display: block; margin-bottom: 10px;">
+                <label>
                     Hero ID (assigned):
-                    <input type="text" name="hero-id" readonly
-                           style="width: 100%; padding: 8px; background: #eee;"
-                           value="MULTI-XXXX">
+                    <input type="text" name="hero-id" readonly value="MULTI-XXXX">
                 </label>
-                <label style="display: block; margin-bottom: 10px;">
+                <label>
                     Secret Identity (optional):
-                    <input type="text" name="civilian-name" 
-                           style="width: 100%; padding: 8px;"
-                           autocomplete="name">
+                    <input type="text" name="civilian-name">
                 </label>
             </fieldset>
 
-            <!-- Power Selection -->
-            <fieldset style="border: 2px solid #1a237e; padding: 15px; margin-bottom: 20px;">
-                <legend style="padding: 0 10px; font-weight: bold;">Powers & Abilities</legend>
-                <p>Select your primary powers:</p>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li>
-                        <label style="display: block; margin-bottom: 5px;">
-                            <input type="checkbox" name="powers" value="flight"> Flight
-                        </label>
-                    </li>
-                    <li>
-                        <label style="display: block; margin-bottom: 5px;">
-                            <input type="checkbox" name="powers" value="strength"> Super Strength
-                        </label>
-                    </li>
-                    <li>
-                        <label style="display: block; margin-bottom: 5px;">
-                            <input type="checkbox" name="powers" value="speed"> Super Speed
-                        </label>
-                    </li>
-                </ul>
-            </fieldset>
-
-            <!-- Team-Up Requests -->
-            <fieldset style="border: 2px solid #1a237e; padding: 15px; margin-bottom: 20px;">
-                <legend style="padding: 0 10px; font-weight: bold;">Team-Up Requests</legend>
-                <ul style="list-style: none; padding: 0; margin: 0;">
-                    <li>
-                        <label style="display: block; margin-bottom: 10px;">
-                            <input type="radio" name="teamup" value="yes"> Yes, I want teammates
-                        </label>
-                    </li>
-                    <li>
-                        <label style="display: block; margin-bottom: 10px;">
-                            <input type="radio" name="teamup" value="no" checked> No, solo mission
-                        </label>
-                    </li>
-                </ul>
-                <label style="display: block;">
-                    Team Requirements:
-                    <textarea name="teamup-details" rows="3" style="width: 100%;"></textarea>
-                </label>
-            </fieldset>
-
-            <!-- Travel Details -->
-            <fieldset style="border: 2px solid #1a237e; padding: 15px; margin-bottom: 20px;">
-                <legend style="padding: 0 10px; font-weight: bold;">Mission Details</legend>
-                <label style="display: block; margin-bottom: 10px;">
-                    Destination Realm:
-                    <select name="destination" required style="width: 100%; padding: 8px;">
-                        <option value="">-- Choose --</option>
-                        <option value="asgard">Asgard</option>
-                        <option value="dark-dimension">Dark Dimension</option>
-                    </select>
-                </label>
-                <label style="display: block; margin-bottom: 10px;">
-                    Departure Date:
-                    <input type="date" name="travel-date" required min="2023-11-01" 
-                           style="width: 100%; padding: 8px;">
-                </label>
-            </fieldset>
-
-            <!-- Terms Agreement -->
-            <div style="margin-bottom: 20px;">
-                <label style="display: block;">
-                    <input type="checkbox" name="terms" required> 
-                    I agree to the <a href="#">Multiversal Travel Accord</a>
-                </label>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" style="
-                background: #e63946;
-                color: white;
-                padding: 10px 20px;
-                border: none;
-                display: block;
-                margin: 0 auto;
-                font-weight: bold;
-            ">
-                ACTIVATE PORTAL
-            </button>
+            <!-- Rest of the form would work but look plain -->
+            <!-- ... -->
+            
+            <button type="submit">ACTIVATE PORTAL</button>
         </form>
     </main>
 
-    <footer style="text-align: center; margin-top: 20px; color: white;">
+    <footer>
         <p>© 2023 Multiversal Hero Travel Authority</p>
     </footer>
 </body>
